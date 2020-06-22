@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Chat | Kakao Clone</title>
   </head>
-  <body>
+  <body class="chat-body">
     <div class="status-bar">
       <div class="status-bar__column">
         <span class="status__bar clock">13:54</span>
@@ -22,7 +22,7 @@
         <i class="fas fa-battery-full"></i>
       </div>
     </div>
-    <header class="header">
+    <header class="header room-header">
       <div class="header__header-column">
         <a href="index.html" class="header__back-btn">
           <i class="fas fa-arrow-left"></i>
@@ -38,7 +38,7 @@
         </span>
       </div>
     </header>
-    <main class="chat">
+    <main class="chat-screen">
       <ul class="chat__messages">
         <span class="chat__timestamp">Friday, January 11, 2019</span>
         <li class="incoming-message message">
@@ -49,9 +49,8 @@
               Congrats I love you!
             </div>
           </div>
-          <span class="message__timestamp"></span>
         </li>
-        <li class="incoming-message message">
+        <li class="sent-message message">
           <span class="message__timestamp"></span>
           <div class="message__content">
             <div class="message__bubble">
@@ -59,20 +58,37 @@
             </div>
           </div>
         </li>
+        <li class="incoming-message message">
+          <img src="images/avatar.jpeg" class="g-avatar message__avatar" />
+          <div class="message__content">
+            <span class="message__autor">Best Friend</span>
+            <div class="message__bubble">
+              Great!!
+            </div>
+          </div>
+        </li>
+        <li class="sent-message message">
+          <span class="message__timestamp"></span>
+          <div class="message__content">
+            <div class="message__bubble">
+              LOL
+            </div>
+          </div>
+        </li>
       </ul>
     </main>
-    <div class="chat__write">
-      <div class="chat__write-column">
+    <div class="chat__write--container">
+      <input
+        class="chat__write"
+        type="text"
+        placeholder="Send message"
+        class="chat__write-input"
+      />
+      <div class="chat__write-left chat__icon">
         <i class="far fa-plus-square"></i>
       </div>
-      <div class="chat__write-column">
-        <input
-          type="text"
-          placeholder="Send message"
-          class="chat__write-input"
-        />
-      </div>
-      <div class="chat__write-column">
+
+      <div class="chat__write-right chat__icon">
         <span class="chat__write-icon">
           <i class="far fa-smile-wink"></i>
         </span>
@@ -80,6 +96,9 @@
           <i class="fas fa-microphone"></i>
         </span>
       </div>
+    </div>
+    <div class="bigScreen">
+      <span class="bigScreen__text">Please make your screen small!</span>
     </div>
   </body>
 </html>

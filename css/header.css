@@ -1,8 +1,14 @@
 .header {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: white;
 }
 
 .header .header__title {
@@ -15,6 +21,7 @@
   margin-left: 20px;
   cursor: pointer;
 }
+
 .header .header__header-column {
   display: flex;
   align-items: center;
